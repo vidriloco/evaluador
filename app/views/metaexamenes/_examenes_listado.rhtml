@@ -1,0 +1,39 @@
+<br/>
+<% if @examenes.blank? %>
+	<h5 class='justificado_centrado'>No hay exámenes de aplicantes en éste momento.</h5>
+<% else %>
+<div class='contenedor_de_tabla'>
+	<h5 id='justificado'>Los elementos de la tabla que sigue corresponden a exámenes de aplicantes.</h5>
+	<br/>
+	<table>
+		<tr>
+			<th>Campaña</th>
+			<th>Nombre</th>
+			<th>Supervisor</th>
+			<th>Fecha</th>
+			<th>Opciones Adicionales</th>
+		</tr>
+		
+		<%i=0%>
+		<% @examenes.each do |examen| %>
+			<% if i.even? %>
+			<tr class='even' id=<%= "examen" << examen.id.to_s %>>
+			<% else %>
+			<tr>
+			<% end %>
+			<td><%= examen.metaexamen.campana %></td>
+			<td><%= examen.nombre %></td>
+			<td><%= examen.supervisor %></td>
+			<td><%= examen.fecha.to_s(:short) %></td>
+			<td>
+				<%= link_to_remote 'Ver Respuestas', :url => {:action => :develar_respuestas, :id => examen } %>
+				<%= link_to 'A PDF', :action => :a_pdf, :id => examen %>
+				<%= link_to_remote 'Eliminar', :url => {:action => :eliminar_examen, :id => examen }, :confirm => '¿Deseas eliminar éste exámen?' %>
+			</td>
+			<%i=i+1%>
+		<% end %>
+		<tr/>
+	</table>
+</div>
+<% end %>
+

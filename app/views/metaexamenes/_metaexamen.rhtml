@@ -1,0 +1,14 @@
+<div class="descripcion">
+	<%= link_to 'Eliminar', { :action => 'destroy', :id => metaexamen }, 
+			:confirm => '¿Estás seguro?', :method => :post %>
+	<br/>
+	<% @metaexamen = metaexamen %>
+	<b>Descripción del formato: </b><%= in_place_editor_field :metaexamen, :descriptor %><br/>
+	<b>Campaña: </b><%= in_place_editor_field :metaexamen, :campana %><br/>
+	<b>Rubro: </b><%= in_place_editor_field :metaexamen, :rubro %><br/>
+	<b>Area: </b><%= in_place_editor_field :metaexamen, :area %><br/>
+	<b>Tiempo estimado del examen: </b><%= in_place_editor_field :metaexamen, :tiempo %><i> minutos</i><br/>
+	<%= link_to_remote 'Ver Preguntas', :url => {:action => 'despliega_preguntas', :id => metaexamen }%>
+</div>
+<div id=<%= 'preguntasg'+ metaexamen.id.to_s %>></div>
+<br/>

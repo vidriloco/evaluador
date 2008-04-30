@@ -1,0 +1,36 @@
+table { 
+font-family: Arial, sans-serif; 
+font-size: 10px; 
+width: auto; 
+float: center;
+margin-left: auto;
+margin-right: auto;
+ }
+table th { 
+text-align: center; 
+padding: 4px 0 4px 9px;
+padding-right: 8px;
+background-image: url(../images/lima_stripe.png);
+background-repeat: repeat-x repeat-y;
+border: 1px solid #D7DCE1;
+color: black; 
+}
+table tr td { 
+padding:5px; 
+font-family: Arial, sans-serif; 
+font-size: 11px; 
+}
+table tr.even td { 
+background-image: url(../images/kiwi_stripe.png);
+background-repeat: repeat-x repeat-y;
+border: 0px; 
+}
+table tr.odd td { 
+background: #FFF; 
+border: 1px solid #DEDADA;  
+}
+table tr td#plano{
+width: 20%;
+text-align: center;
+padding: 1px;
+}

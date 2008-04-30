@@ -1,0 +1,21 @@
+
+<h1>Datos de evaluación</h1>
+	<div id='justificado_espaciado'>
+		<% form_tag :action => 'evaluacion' do %>
+			<%= render :partial => 'form' %>
+			<%= submit_tag 'Ingresar' %>
+		<% end %>
+	</div>
+	<div id='limpieza'>
+		<% unless session[:tiempo].nil? %>
+			<br/>
+			<h5 class='centrado'>
+			    Supervisor: La evaluación anterior no finalizó correctamente. Si va a iniciar una nueva, haga click
+			    <%= link_to_remote 'aquí', :url => {:action => :contrasena_acceso, :id => 0}%>
+			</h5>
+			<br/>
+			<div id='boton_para_c' class='justificado_mas'>		</div>
+		<% end %>
+	</div>
+<br />
+

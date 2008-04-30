@@ -1,0 +1,5 @@
+<%= form_remote_tag :url => {:action => :limpieza }%>
+	<p>Haz click en el botón para limpiar todo el registro.</p>
+	<br/>
+	<%= submit_tag 'Limpiar' %> <%= link_to_remote 'Cancelar', :url => {:action => :contrasena_acceso, :id => 2} %>
+<%= end_form_tag %>

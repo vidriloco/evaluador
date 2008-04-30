@@ -1,0 +1,22 @@
+<% content_for :navigation do %>
+	<h5 class='izquierdo'><%= link_to 'Atrás', :action => :registro %></h5>
+<% end %>
+
+<div id='sustituible'>
+	<h2 class='centrado'><%= @tipo %></h2>
+
+	<div id='justificado_espaciado' class='datos_aspirante'>
+		<div id='inline'><b>Tu nombre: </b><%= session[:aspirante].nombre %></div>
+		<div id='inline'><b>Tu supervisor es: </b><%= session[:aspirante].supervisor %></div>
+		<div id='inline'><b>Hoy es: </b><%= session[:aspirante].fecha.to_s(:long) %></div>
+	</div>
+
+	<div id="examen_preguntas">
+		<br/>
+		<p class='centrado'>El tiempo para ésta evaluación es de <b><%= tiempo_restante || @metaexamen.tiempo %></b> minutos.</p>
+		<p class='centrado'>La evaluación iniciará a partir de que oprimas el botón <b>Iniciar</b>.</p><br/>
+		<%= form_remote_tag :url => {:action => 'prepara_examen', :id => @metaexamen} %>
+			<div class='centrado'> <%= submit_tag 'Iniciar' %></div>
+		<%= end_form_tag %>
+	</div>
+</div>

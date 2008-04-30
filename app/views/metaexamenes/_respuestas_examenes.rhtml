@@ -1,0 +1,12 @@
+<br/>
+<h3 id='justificado'> Respuestas asociadas al exámen con datos: </h3>
+<br/>
+<h4 id='justificado'>Aplicante <i><%= @examen.nombre %></i> Fecha <i><%= @examen.fecha.to_s(:long) %></i></h4>
+<div class='listado_de_respuestas'>
+	<% numero_de_preguntas = preguntas.length-1 %>
+	<% rango = Range.new 0, numero_de_preguntas %>
+	<% for numero in rango.to_a %>
+		<h5><%= "#{numero+1}.- " << preguntas[numero] %></h5>
+		<p class='chico_respuesta'><%= respuestas[numero] %></p>
+	<% end %>
+</div>

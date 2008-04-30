@@ -1,0 +1,4 @@
+<%= form_remote_tag :url => {:action => :contrasena_acceso, :id => 1} %>
+	<%= password_field_tag 'contrasena' %>
+	<%= submit_tag 'Aceptar' %>  <%= link_to_remote 'Cancelar', :url => {:action => :contrasena_acceso, :id => 2} %>
+<%= end_form_tag %>

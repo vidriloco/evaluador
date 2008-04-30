@@ -1,0 +1,32 @@
+
+	<div class='justificado_centrado' id='mensajes'><p>Te restan <%= "#{tiempo_restante}" %> minutos.</p></div>
+	<% if tiempo_restante <= 5 %>
+		<div class='justificado_centrado' id='alerta'>
+			<p>Verifica tus respuestas y termina de contestar las que puedan hacerte falta.</p>
+		</div>
+	<% else %>
+		<div class='justificado_centrado' id='alerta' style='display:none'></div>
+	<% end %>
+	<div id='justificado_espaciado'>
+		<b>Área: </b><%= metaexamen.area %><br/>
+		<b>Rubro: </b><%= metaexamen.rubro %><br/>
+		<b>Campaña: </b><%= metaexamen.campana %><br/>
+	</div>
+
+	<div class='respuestas'>
+	 <% i=0 %>
+	 <%= form_remote_tag :url => {:action => 'integra_respuestas'} %>
+		 <% @preguntas.each do |p| %>
+		 		<p class='campo'><label for=<%= "#{i}" %>><b><i><%= i+1 %>. </i><%= p %></b></label><br/>
+		 		<%= text_area_tag "#{i}", nil, :cols => 80 %>
+		 		</p>
+		 		<%= observe_field i, :url => { :action => :protege_respuestas }, :frequency => 1, :with => i %>
+		 		<% i=i+1 %>
+		 <% end %>
+		 <br/>
+		 <%= submit_tag 'Guardar' %>
+	 <%= end_form_tag %>
+	 
+	 <%= periodically_call_remote :url => 'sincroniza', :frequency => '40' %>
+	</div>
+<div>

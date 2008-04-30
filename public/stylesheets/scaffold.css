@@ -1,0 +1,52 @@
+.fieldWithErrors {
+  display :inline
+  outline-color: red;
+}
+
+#errorExplanation {
+	position: relative; 
+	float: center;  
+	width: 340px;
+	margin-top:2em;
+	padding: 4;  
+	padding-bottom: 10px;
+	border: 1px solid #FF0000;
+	background-color: #FF9593;
+}
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 10px 5px 5px 15px;
+  font-size: 12px;
+  margin: 1px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  text-align: left;
+  color: #333;
+  margin-left: 7px;
+  padding: 5px;
+  padding-left: 14px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+  text-align: left;
+  margin-left: 45px;
+}
+
+div.uploadStatus {
+  margin: 5px;
+}
+
+.fieldWithErrors input,
+.fieldWithErrors select,
+.fieldWithErrors password,
+.fieldWithErrors textarea
+{
+	background: pink;
+	background-color: pink;
+}

@@ -1,0 +1,5 @@
+<% @metaexamen = metaexamen %>
+<li id=<%= "#{@indice}#{@metaexamen}preg" %>><%= pregunta %>
+  <%= link_to_remote 'Eliminar', :url => {:action => :elimina_pregunta, :id => "#{@indice} #{@metaexamen}"}, 
+			:confirm => '¿Estás seguro?' %>
+</li>

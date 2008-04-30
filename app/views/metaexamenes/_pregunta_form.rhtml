@@ -1,0 +1,6 @@
+<h5>Agregar preguntas</h5>
+<%= form_remote_tag :url => {:action => 'agrega_pregunta', :id => @metaexamen} %>
+	<%= text_field_tag 'pregunta', nil, :size => 75 %>
+	<%= submit_tag 'Agregar' %> <%= link_to_remote 'Cancelar', :url => {:action => :cerrar , :id => @metaexamen}%>
+<%= end_form_tag %>
+<br/>

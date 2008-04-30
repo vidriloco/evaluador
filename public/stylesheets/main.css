@@ -1,0 +1,164 @@
+
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 13px;
+ background-image: url(../images/light_green_no_gradient.png);
+ background-repeat: repeat-x repeat-y;
+}
+#wrapper { 
+ margin: 0 auto;
+ width: 922px;
+}
+#header {
+ width: 900px;
+ color: #333;
+ padding: 10px;
+ border: 1px solid #653734;
+ height: 30px;
+ margin: 10px 0px 0px 0px;
+ background-image: url(../images/red_stripe_header.png);
+ background-repeat: repeat-x repeat-y;
+}
+
+h1 {
+ padding-top: 30px;
+ padding-left: 20px;
+ font-family: sans-serif arial;
+}
+
+#navigation {
+ width: 900px;
+ color: #333;
+ padding: 10px;
+ height: 8px;
+ border: 1px solid #87D29B;
+ margin: 0px 0px 0px 0px;
+ background-image: url(../images/verde_claro_stripe.png);
+ background-repeat: repeat-x repeat-y;
+}
+#content { 
+ width: 900px;
+ color: #333;
+ border-left: 1px solid #7BD3AE;
+ border-right: 1px solid #7BD3AE;
+ border-bottom: 1px solid #7BD3AE;
+ background-color: white;
+ margin: 0px 0px 0px 0px;
+ padding: 10px;
+ height: auto;
+}
+#footer { 
+ width: 900px;
+ color: #333;
+ border: 1px solid #ccc;
+ background-image: url(../images/red_stripe_header.png);
+ background-repeat: repeat-x repeat-y;
+ margin: 0px 0px 10px 0px;
+ padding: 10px;
+}
+#clogo{
+ position: absolute;
+ left: 200px;
+ top: 20px;
+}
+input, select, textarea{
+ border: 1px solid gray;
+ background: #FAFAB3;
+ color: black;
+}
+#justificado{
+ padding-left: 30px;
+}
+.justificado_mas{
+ margin-left: 35px;
+ margin-top: 10px;
+}
+#justificado_espaciado{
+ padding-top: 30px;
+ padding-left: 30px;
+}
+.chico_respuesta{
+ font-size: 11px;
+ padding-left: 10px;
+}
+.grande{
+ font-size: 25px;
+ font-family: sans-serif Verdana;
+ color: white; 
+ padding-top: 8px;
+}
+.mensaje1{
+ padding: 10px;
+ background-color: #FBFFE2;
+ border: 1px solid #FBFBC2;
+ width: 250px;
+ text-align: center;
+}
+.campo{
+ padding-top: 4px;
+}
+.centrado{
+ text-align: center;
+}
+.justificado_centrado{
+ text-align: center;
+ margin-left: 30px;
+}
+.tabla{
+ display: table;
+ width: auto;
+}
+.columna{
+ display: table-cell;
+ width:200px;
+ padding-right: 50px;
+}
+.borde{
+ border-left: 1px solid #FFFA9D;
+}
+.listado_de_respuestas{
+ border: 1px solid #DAECB1;
+ width: 600px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 20px;
+ padding-top: 10px;
+ padding-left: 40px;
+ background-color: #EDF4E4;
+}
+.lista{
+ border: 1px solid #D6F0E7;
+ background-color: #EDF6F3;
+ padding-left: 40px;
+ width: 800px;
+}
+.datos_aspirante{
+ text-align: center;
+ border-bottom: 1px solid #FFD2D2;
+}
+#inline{
+ display: inline;
+ padding-right: 15px;
+}
+.respuestas{
+ margin-left: 30px;
+ width: 600px;
+ padding: 5px;
+}
+#mensajes{
+ width: 300px;
+ margin-top: 10px;
+ border: 1px solid #B9E4C8;
+ background-color: #D3ECDB;
+}
+#alerta{
+ width: 500px;
+ margin-top: 10px;
+ border: 1px solid #E3D1D1;
+ background-color: #EAE2E1;
+}
+.izquierdo{
+ margin-left: 860px;
+}

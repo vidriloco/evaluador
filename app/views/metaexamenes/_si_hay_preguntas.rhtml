@@ -1,0 +1,9 @@
+<br/>
+<%= link_to_remote 'Agregar pregunta', :url => {:action => 'pregunta_form', :id => metaexamen, :n => 'ag_p'}  %>
+<ul id=<%= 'listado'+ metaexamen.id.to_s %> class='lista'>
+	<% @indice = 0 %>
+	<%	@preguntas.each do |pregunta| %>
+		 <%= render :partial => 'pregunta_en_lista', :object => @indice, :locals => {:pregunta => pregunta, :metaexamen => metaexamen.id} %>
+			<% @indice = @indice + 1 %>
+	<%	end %>
+</ul>

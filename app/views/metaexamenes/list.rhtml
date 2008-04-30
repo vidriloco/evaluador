@@ -1,0 +1,26 @@
+<h1>Formatos de Exámenes</h1>
+
+<div id='justificado_espaciado'>
+<% if @metaexamenes.blank? %>
+	<br/>
+		<p class='mensaje1'>No hay formatos de exámen definidos</p>
+<% else %>
+	<% for metaexamen in @metaexamenes %>
+		<%= render :partial => 'metaexamen', :locals => {:metaexamen => metaexamen } %>
+	<% end %>
+<% end %>
+<br/>
+<%= link_to 'Anterior', { :page => @metaexamen_pages.current.previous } if @metaexamen_pages.current.previous %>
+<%= link_to 'Siguiente', { :page => @metaexamen_pages.current.next } if @metaexamen_pages.current.next %> 
+<br/>
+<%= link_to 'Nuevo formato', :action => 'new' %>
+</div>
+
+
+<br />
+<h1>Exámenes de Aplicantes</h1>
+<div id='lista_examenes'>
+<%= render :partial => 'examenes_listado', :object => @examenes %>
+</div>
+<div id='respuestas_examenes'></div>
+

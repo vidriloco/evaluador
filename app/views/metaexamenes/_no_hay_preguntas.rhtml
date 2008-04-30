@@ -1,0 +1,4 @@
+<p class='mensaje1' id=<%= 'no_preguntas'+ metaexamen.id.to_s %>>
+		No hay aún preguntas para éste formato, pero puedes agregar una 
+		<%= link_to_remote 'aquí', :url => {:action => 'pregunta_form', :id => metaexamen, :n => 'sin_p'} %>
+</p>

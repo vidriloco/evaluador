@@ -1,0 +1,12 @@
+<br/>
+<div id=<%= 'forma_pregunta' + metaexamen.id.to_s %>></div> 
+<%= link_to_remote 'Cerrar', :url => {:action => 'cerrar_listado', :id => metaexamen}  %>
+<div id=<%= 'preguntas' + metaexamen.id.to_s %>>
+    <% if @preguntas.blank? %>
+	    <%= render :partial => 'no_hay_preguntas', :locals => {:metaexamen => metaexamen} %>
+	  <% else %>
+	    <%= render :partial => 'si_hay_preguntas', :locals => {:metaexamen => metaexamen}, :object => @preguntas %>
+    <% end %>
+</div>
+<br/>
+<ul id=<%= 'solo_en_vacio' + metaexamen.id.to_s %> class='lista' style='display:none'></ul>

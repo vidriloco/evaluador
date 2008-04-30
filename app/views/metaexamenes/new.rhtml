@@ -1,0 +1,16 @@
+<h1>Nuevo formato de exámen</h1>
+<div id='justificado_espaciado'>
+<div class='tabla'>
+	<div class='columna'>
+		<% form_tag :action => 'crear_formato' do %>
+			<%= render :partial => 'form' %>
+			<br/>
+			<div class='centrado'>
+				<%= submit_tag "Guardar formato" %> 
+				<%= link_to 'Atrás', :action => 'list' %>
+			</div>
+		<% end %>
+	</div>
+</div>
+</div>
+

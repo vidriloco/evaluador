@@ -1,0 +1,17 @@
+<%= error_messages_for 'examen' %>
+
+<!--[form:examen]-->
+<p class='campo'><label for="examen_tipo"><b>Tipo de Examen</b></label><br/>
+<%= select_tag 'tipo', options_for_select(Metaexamen.todos_los_tipos) %></p>
+
+<p class='campo'><label for="examen_nombre"><b>Nombre del Aplicante</b></label><br/>
+<%= text_field_tag  'nombre', nil, :size => 40  %></p>
+
+<p class='campo'><label for="examen_supervisor"><b>Supervisor</b></label><br/>
+<%= text_field_tag  'supervisor', nil, :size => 40  %></p>
+
+<p class='campo'><label for="examen_fecha"><b>Fecha</b></label><br/>
+<%= Date.today.to_s(:long) %>
+<!--[eoform:examen]-->
+<br/>
+<br/>
